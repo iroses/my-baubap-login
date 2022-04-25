@@ -3,8 +3,12 @@
 
     <!-- Login screen -->
     <string name="title_login_fragment">Login</string>
-    <string name="label_welcome_message">¡Welcome to Baubap!</string>
+    <string name="label_welcome_message">Welcome to Baubap!</string>
     <string name="label_email">Email</string>
     <string name="label_password">Password</string>
     <string name="label_login">Login</string>
+    <string name="label_login_success">User %1$s successfully logged in</string>
+    <string name="error_invalid_username">Not a valid username</string>
+    <string name="error_invalid_password">Password must be >5 characters</string>
+    <string name="error_login_failed">"Login failed"</string>
 </resources>
