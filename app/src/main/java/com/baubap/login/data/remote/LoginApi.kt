@@ -9,7 +9,7 @@ object LoginApi {
     "rick_sanchez@gmail.com" to "Password123"
   )
 
-  suspend fun login(email: String, password: String): Result<LoginResponse> {
+  fun login(email: String, password: String): Result<LoginResponse> {
     users[email]?.let {
       if (it == password) {
         return Result.Success(

@@ -1,19 +1,17 @@
 package com.baubap.login.utils
 
-import android.util.Patterns
-
 fun String.isInvalidEmail(): Boolean {
   return !isEmailValid()
 }
 
-private fun String.isEmailValid(): Boolean {
-  return Patterns.EMAIL_ADDRESS.matcher(this).matches()
+fun String.isEmailValid(): Boolean {
+  return "(\\w+@[a-zA-Z_]+?\\.[a-zA-Z]{2,6})".toRegex().matches(this)
 }
 
 fun String.isInvalidPassword(): Boolean {
   return !isPasswordValid()
 }
 
-private fun String.isPasswordValid(): Boolean {
+fun String.isPasswordValid(): Boolean {
   return this.length > 5
 }
