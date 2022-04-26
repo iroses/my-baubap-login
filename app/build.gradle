@@ -15,7 +15,7 @@ android {
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "com.baubap.login.CustomTestRunner"
     }
 
     buildTypes {
@@ -36,6 +36,9 @@ android {
     }
     testOptions {
         unitTests.returnDefaultValues = true
+    }
+    hilt {
+        enableTransformForLocalTests = true
     }
 }
 
@@ -84,4 +87,11 @@ dependencies {
     // Test Coroutines
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutinesTestVersion"
     androidTestImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutinesTestVersion"
+
+    // Fragment
+    debugImplementation "androidx.fragment:fragment-testing:$fragmentKtxVersion"
+
+    // Hilt Tests
+    androidTestImplementation "com.google.dagger:hilt-android-testing:$hiltTestVersion"
+    kaptAndroidTest "com.google.dagger:hilt-android-compiler:$hiltTestCompilerVersion"
 }

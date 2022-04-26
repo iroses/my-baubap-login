@@ -56,4 +56,8 @@ ext {
 
     // Test Coroutines
     coroutinesTestVersion = '1.5.2'
+
+    // Hilt Tests
+    hiltTestVersion = '2.38.1'
+    hiltTestCompilerVersion = '2.41'
 }

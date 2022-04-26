@@ -29,7 +29,7 @@ class LoginViewModel @Inject constructor(
   fun attemptLogin(email: String, password: String) {
     when {
       email.isInvalidEmail() -> {
-        _loginFormState.value = EmailError(error = R.string.error_invalid_username)
+        _loginFormState.value = EmailError(error = R.string.error_invalid_email)
       }
       password.isInvalidPassword() -> {
         _loginFormState.value = PasswordError(error = R.string.error_invalid_password)

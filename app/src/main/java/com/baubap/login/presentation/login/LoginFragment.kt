@@ -42,8 +42,14 @@ class LoginFragment : Fragment() {
         clearErrors()
 
         when (state) {
-          is LoginFormState.EmailError -> binding.emailView.error = getString(state.error)
-          is LoginFormState.PasswordError -> binding.passwordView.error = getString(state.error)
+          is LoginFormState.EmailError -> {
+            binding.emailView.error = getString(state.error)
+            binding.emailView.requestFocus()
+          }
+          is LoginFormState.PasswordError -> {
+            binding.passwordView.error = getString(state.error)
+            binding.passwordView.requestFocus()
+          }
         }
       }
 
